@@ -19,3 +19,7 @@ get '/delivery' do
   erb :delivery
 end
 
+get '/pizza' do
+  erb :pizza
+end
+
