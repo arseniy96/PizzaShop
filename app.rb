@@ -14,3 +14,8 @@ end
 get '/contacts' do
   erb :contacts
 end
+
+get '/delivery' do
+  erb :delivery
+end
+
