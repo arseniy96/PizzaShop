@@ -23,8 +23,8 @@
                 <p><b>Цена: <%= p.price %></b></p>
                 <p style="color: #5e5e5e;"><%= p.description %></p>
 
-                <button onclick="add_to_cart('<%= p.title %>')" type="button" class="btn btn-success">Add to cart</button>
-                <button onclick="remove_to_cart('<%= p.title %>')" style="margin-left: 100px;" type="button" class="btn btn-success">Remove to cart</button>
+                <button onclick="add_to_cart('<%= p.title %>')" style="float: left" type="button" class="btn btn-success">Add to cart</button>
+                <button onclick="remove_to_cart('<%= p.title %>')" style="float: right" type="button" class="btn btn-success">Remove to cart</button>
               </div>
             </div>
           <% end %>
