@@ -8,7 +8,16 @@
           <% @pizza.each do |p|%>
             <div class="col-md-4" >
               <p><img src="<%= p.path_to_image %> " width="200px" height="150px"></p>
-              <p><%= p.title %> Цена: <b><%= p.price %></b></p>
+              <p>
+                <%= p.title %> &nbsp;&nbsp;
+                &nbsp;&nbsp;<b>Цена: <%= p.price %></b>
+                <% if p.is_veg%>
+                  <img src="images/pizzaVeg_icon.jpg" width="30px">&nbsp;&nbsp;
+                <% end %>
+                <% if p.is_spicy%>
+                    <img src="images/pizzaHot_icon.jpg" width="30px">&nbsp;&nbsp;
+                <% end %>
+              </p>
             </div>
           <% end %>
         </div>
