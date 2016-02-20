@@ -7,20 +7,23 @@
         <div class="row">
           <% @pizza.each do |p|%>
             <div class="col-md-4">
-              <div style="border: 2px solid lightgrey; border-radius: 15px; padding: 15px; padding-left: 28px; height: 285px">
+              <div style="border: 2px solid lightgrey; border-radius: 15px; padding: 15px; padding-left: 28px; height: 335px">
                 <p><img src="<%= p.path_to_image %> " width="200px" height="150px" align="center"></p>
-                <p style="height: 25px">
-                  <%= p.title %> &nbsp;&nbsp;
-                  &nbsp;&nbsp;<b>Цена: <%= p.price %></b>
-                  <% if p.is_veg%>
-                    <img src="images/pizzaVeg_icon.jpg" width="25px">&nbsp;&nbsp;
-                  <% end %>
-                  <% if p.is_spicy%>
-                      <img src="images/pizzaHot_icon.jpg" width="25px">&nbsp;&nbsp;
-                  <% end %>
-                </p>
-                <p><%= p.description %></p>
-                <button onclick="something('<%= p.title %>')" style="margin-left: 45px; padding-left: 30px; padding-right: 30px" type="button" class="btn btn-primary">Заказать</button>
+                  <p style="font-size: 130%; height: 30px">
+                    <%= p.title %>&nbsp;&nbsp;
+
+                    <% if p.is_veg%>
+                      <img src="images/pizzaVeg_icon.jpg" width="25px">&nbsp;&nbsp;
+                    <% end %>
+                    <% if p.is_spicy%>
+                        <img src="images/pizzaHot_icon.jpg" width="25px">&nbsp;&nbsp;
+                    <% end %>
+                  </p>
+
+                <p><b>Цена: <%= p.price %></b></p>
+                <p style="color: #5e5e5e;"><%= p.description %></p>
+
+                <button onclick="something('<%= p.title %>')" style="margin-left: 55px;" type="button" class="btn btn-success">Add to cart</button>
               </div>
             </div>
           <% end %>
