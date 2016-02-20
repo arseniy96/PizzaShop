@@ -7,7 +7,7 @@
         <div class="row">
           <% @pizza.each do |p|%>
             <div class="col-md-4">
-              <div style="border: 2px solid lightgrey; border-radius: 15px; padding: 15px; padding-left: 28px; height: 260px">
+              <div style="border: 2px solid lightgrey; border-radius: 15px; padding: 15px; padding-left: 28px; height: 285px">
                 <p><img src="<%= p.path_to_image %> " width="200px" height="150px" align="center"></p>
                 <p style="height: 25px">
                   <%= p.title %> &nbsp;&nbsp;
@@ -19,6 +19,7 @@
                       <img src="images/pizzaHot_icon.jpg" width="25px">&nbsp;&nbsp;
                   <% end %>
                 </p>
+                <p><%= p.description %></p>
                 <button onclick="something('<%= p.title %>')" style="margin-left: 45px; padding-left: 30px; padding-right: 30px" type="button" class="btn btn-primary">Заказать</button>
               </div>
             </div>
