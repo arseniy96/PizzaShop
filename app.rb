@@ -34,6 +34,6 @@ get '/pizza' do
   erb :pizza
 end
 
-get '/cart' do
+post '/cart' do
   erb :cart
 end
