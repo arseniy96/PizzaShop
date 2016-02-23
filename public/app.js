@@ -2,36 +2,39 @@
  * Created by Dima on 17.02.2016.
  */
 
-function add_to_cart(pizza)
+function add_to_cart(id)
 {
-    var x = window.localStorage.getItem(pizza);
+    var key = 'product_' + id;
+    var x = window.localStorage.getItem(key);
     x = x*1 + 1
-    window.localStorage.setItem(pizza, x);
-    var sum = 0;
+    window.localStorage.setItem(key, x);
 
-    for(var i=0, len=localStorage.length; i<len; i++)
-    {
-        var key = localStorage.key(i);
-        var value = localStorage[key]*1;
-        sum = sum + value;
-    }
-
-    alert(pizza + ': ' + x.toString() + '\n Всего: ' + sum);
+    alert(x.toString() + "\nItems in your cart: " + get_number_products());
 }
 
-function remove_to_cart(pizza)
+function remove_to_cart(id)
 {
-    var x = window.localStorage.getItem(pizza);
+    var key = 'product_' + id;
+    var x = window.localStorage.getItem(key);
     x = x*1 - 1
-    window.localStorage.setItem(pizza, x);
-    var sum = 0;
+    window.localStorage.setItem(key, x);
 
-    for(var i=0, len=localStorage.length; i<len; i++)
+    alert(x.toString() + "\nItems in your cart: " + get_number_products());
+}
+
+function get_number_products()
+{
+    var total = 0;
+
+    for(var i=0; i<window.localStorage.length; i++)
     {
-        var key = localStorage.key(i);
-        var value = localStorage[key]*1;
-        sum = sum + value;
-    }
+        var key = window.localStorage.key(i);
+        var value = window.localStorage.getItem(key);
+        if (key.indexOf("product_")==0)
+        {
+            total = total*1 + value*1;
 
-    alert(pizza + ': ' + x.toString() + '\n Всего: ' + sum);
+        }
+    }
+    return total;
 }

@@ -23,9 +23,9 @@
                 <p><b>Цена: <%= p.price %></b></p>
                 <p style="color: #5e5e5e;"><%= p.description %></p>
 
-                <button onclick="add_to_cart('<%= p.title %>')" style="float: left; width: 80px;" type="button" class="btn btn-success"> Add </button>
+                <button onclick="add_to_cart('<%= p.id %>')" style="float: left; width: 80px;" type="button" class="btn btn-success"> Add </button>
                 <input type="text" class="form-control" style="width: 40px; float: left; margin-left: 8px">
-                <button onclick="remove_to_cart('<%= p.title %>')" style="float: right; width: 80px;" type="button" class="btn btn-success">Remove</button>
+                <button onclick="remove_to_cart('<%= p.id %>')" style="float: right; width: 80px;" type="button" class="btn btn-success">Remove</button>
               </div>
             </div>
           <% end %>
