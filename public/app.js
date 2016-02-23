@@ -9,7 +9,8 @@ function add_to_cart(id)
     x = x*1 + 1
     window.localStorage.setItem(key, x);
 
-    alert(x.toString() + "\nItems in your cart: " + get_number_products());
+    //alert(x.toString() + "\nItems in your cart: " + get_number_products());
+    update_orders();
 }
 
 function remove_to_cart(id)
@@ -19,7 +20,8 @@ function remove_to_cart(id)
     x = x*1 - 1
     window.localStorage.setItem(key, x);
 
-    alert(x.toString() + "\nItems in your cart: " + get_number_products());
+    //alert(x.toString() + "\nItems in your cart: " + get_number_products());
+    update_orders();
 }
 
 function get_number_products()
@@ -37,6 +39,12 @@ function get_number_products()
         }
     }
     return total;
+}
+
+function update_orders()
+{
+    var orders = get_orders();
+    $('#orders_input').val(orders);
 }
 
 function get_orders()
