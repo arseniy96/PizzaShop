@@ -10,6 +10,10 @@ class Product < ActiveRecord::Base
 
 end
 
+class Cotact < ActiveRecord::Base
+
+end
+
 before do
   @pizza = Product.all
 end
