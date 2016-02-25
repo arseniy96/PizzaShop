@@ -1,1 +1,19 @@
 <h2>Contacts</h2>
+
+<form action="/contacts" method="POST" role="form" class="visit-form" style="width: 30%">
+  <div class="form-group">
+    <label class="sr-only" for="exampleInputName">Name</label>
+    <input name="client[username]" type="text" class="form-control" id="exampleInputName" placeholder="Your Name"
+         value="">
+  </div>
+  <div class="form-group">
+    <label class="sr-only" for="exampleInputPhone">EmailP</label>
+    <input name="client[email]" type="email" class="form-control" id="exampleInputPhone" placeholder="Your Email"
+           value="">
+  </div>
+  <div class="form-group">
+    <textarea name="client[message]" class="form-control" rows="4"></textarea>
+  </div>
+
+  <p><button type="submit" class="btn btn-primary">Send!</button></p>
+</form>

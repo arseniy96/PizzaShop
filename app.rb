@@ -10,8 +10,10 @@ class Product < ActiveRecord::Base
 
 end
 
-class Cotact < ActiveRecord::Base
-
+class Contact < ActiveRecord::Base
+  validates :username, presence: true
+  validates :email, presence: true
+  validates :message, presence: true
 end
 
 before do
@@ -27,7 +29,18 @@ get '/about' do
 end
 
 get '/contacts' do
+  @c = Contact.new
   erb :contacts
+end
+
+post '/contacts' do
+  @c = Contact.new params[:client]
+  if @c.save
+    erb "<h3>You message has been sent<h3>"
+  else
+    @error = @c.errors.full_messages.first
+    erb :contacts
+  end
 end
 
 get '/delivery' do
