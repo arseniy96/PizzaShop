@@ -53,9 +53,12 @@ end
 
 post '/cart' do
   orders_input = params[:orders]
-  @orders = parse_orders_input orders_input
+  @items = parse_orders_input orders_input
+  @items.each do |item|
+    item[0] = @pizza.find(item[0]).title
+  end
 
-  erb "#{@orders.inspect}"
+  erb :cart
 end
 
 def parse_orders_input orders_input
