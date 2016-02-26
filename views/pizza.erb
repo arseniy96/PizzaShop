@@ -24,7 +24,7 @@
                 <p style="color: #5e5e5e;"><%= p.description %></p>
 
                 <button onclick="add_to_cart('<%= p.id %>')" style="float: left; width: 80px;" type="button" class="btn btn-success"> Add </button>
-                <input type="text" class="form-control" style="width: 40px; float: left; margin-left: 8px">
+                <input id="<%= p.id %>" type="text" class="form-control" style="width: 40px; float: left; margin-left: 8px">
                 <button onclick="remove_to_cart('<%= p.id %>')" style="float: right; width: 80px;" type="button" class="btn btn-success">Remove</button>
               </div>
             </div>

@@ -12,6 +12,7 @@ function add_to_cart(id)
     //alert(x.toString() + "\nItems in your cart: " + get_number_products());
     update_orders_input();
     update_orders_button();
+    $('#'+id.toString()).val(x);
 }
 
 function remove_to_cart(id)
@@ -24,6 +25,7 @@ function remove_to_cart(id)
     //alert(x.toString() + "\nItems in your cart: " + get_number_products());
     update_orders_input();
     update_orders_button();
+    $('#'+id.toString()).val(x);
 }
 
 function get_number_products()
