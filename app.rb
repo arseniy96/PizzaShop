@@ -52,5 +52,24 @@ get '/pizza' do
 end
 
 post '/cart' do
-  erb :cart
+  orders_input = params[:orders]
+  @orders = parse_orders_input orders_input
+
+  erb "#{@orders.inspect}"
+end
+
+def parse_orders_input orders_input
+  arr = []
+  s1 = orders_input.split(/,/)
+  s1.each do |x|
+    s2 = x.split(/=/)
+    s3 = s2[0].split(/_/)
+    id = s3[1]
+    cnt = s2[1]
+
+    arr2 = [id, cnt]
+
+    arr.push arr2
+  end
+  return arr
 end
