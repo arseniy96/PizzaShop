@@ -20,6 +20,7 @@ end
 
 before do
   @pizza = Product.all
+  @orders = Order.all
 end
 
 get '/' do
@@ -86,4 +87,8 @@ post '/order' do
   else
     @error = @order.errors.full_messages.first
   end
+end
+
+get '/order' do
+  erb :order
 end

@@ -1,0 +1,8 @@
+<h2>Orders</h2>
+
+<% @orders.each do |order| %>
+    <p><%= order.orders_input %></p>
+    <p><%= order.username %></p>
+    <p><%= order.phone %></p>
+    <p><%= order.address %></p>
+<% end %>
