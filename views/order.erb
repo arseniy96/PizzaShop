@@ -1,8 +1,22 @@
 <h2>Orders</h2>
 
-<% @orders.each do |order| %>
-    <p><%= order.orders_input %></p>
-    <p><%= order.username %></p>
-    <p><%= order.phone %></p>
-    <p><%= order.address %></p>
-<% end %>
+<table class="table table-strriped">
+  <thead>
+    <tr>
+      <th>Order</th>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.orders_input %></td>
+        <td><%= order.username %></td>
+        <td><%= order.phone %></td>
+        <td><%= order.address %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
