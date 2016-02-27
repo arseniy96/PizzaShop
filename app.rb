@@ -97,3 +97,11 @@ get '/login' do
   erb :login
 end
 
+post '/admin' do
+  if params[:login] == 'admin' && params[:password] == 'admin'
+    erb :admin
+  else
+    @error = 'Access Denied'
+    erb :login
+  end
+end
