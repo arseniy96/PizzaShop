@@ -92,3 +92,8 @@ end
 get '/order' do
   erb :order
 end
+
+get '/login' do
+  erb :login
+end
+
