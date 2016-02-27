@@ -7,13 +7,15 @@ require 'sinatra/activerecord'
 set :database, "sqlite3:pizzashop.db"
 
 class Product < ActiveRecord::Base
-
 end
 
 class Contact < ActiveRecord::Base
   validates :username, presence: true
   validates :email, presence: true
   validates :message, presence: true
+end
+
+class Order < ActiveRecord::Base
 end
 
 before do
