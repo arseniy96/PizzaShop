@@ -78,3 +78,12 @@ def parse_orders_input orders_input
   end
   return arr
 end
+
+post '/order' do
+  @order = Order.new params[:order]
+  if @order.save
+    erb "Order is accepted!"
+  else
+    @error = @order.errors.full_messages.first
+  end
+end
