@@ -30,7 +30,8 @@
   </tbody>
 </table>
 
-<form action="/cart" method="POST" role="form" class="visit-form" style="width: 30%">
+<form action="/order" method="POST" role="form" class="visit-form" style="width: 30%">
+  <input name="order[orders_input]" type="hidden" value="<%= @orders_input %>">
   <div class="form-group">
     <input name="order[username]" type="text" class="form-control" id="exampleInputName" placeholder="Your Name"
            value="">
