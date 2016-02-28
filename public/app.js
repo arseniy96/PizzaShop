@@ -73,3 +73,8 @@ function get_orders()
     return orders;
 }
 
+function remove_all()
+{
+    alert('aaa');
+    return false;
+}
