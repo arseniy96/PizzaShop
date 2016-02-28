@@ -1,1 +1,24 @@
 <h2>Administration</h2>
+
+<h3>Orders</h3>
+
+<table class="table table-strriped">
+  <thead>
+  <tr>
+    <th>Order</th>
+    <th>Name</th>
+    <th>Phone</th>
+    <th>Address</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.orders_input %></td>
+        <td><%= order.username %></td>
+        <td><%= order.phone %></td>
+        <td><%= order.address %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
