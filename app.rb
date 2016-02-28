@@ -60,6 +60,11 @@ end
 post '/cart' do
   @orders_input = params[:orders_input]
   @items = parse_orders_input @orders_input
+
+  if @items.length == 0
+    return erb "Your cart is empty"
+  end
+
   @items.each do |item|
     item[0] = @pizza.find(item[0])
   end
