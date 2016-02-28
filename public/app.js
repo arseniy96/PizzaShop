@@ -75,6 +75,10 @@ function get_orders()
 
 function remove_all()
 {
-    alert('aaa');
+    window.localStorage.clear();
+
+    update_orders_input();
+    update_orders_button();
+
     return false;
 }
