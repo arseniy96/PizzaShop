@@ -86,7 +86,7 @@ end
 post '/order' do
   @order = Order.new params[:order]
   if @order.save
-    erb "Order is accepted!"
+    erb :order
   else
     @error = @order.errors.full_messages.first
   end

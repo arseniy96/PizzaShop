@@ -22,14 +22,6 @@
 	</head>
 	<body style="font-family: Georgia;">
 
-	<script>
-		$(function()
-		{
-			update_orders_input();
-			update_orders_button();
-		})
-	</script>
-
 		<div class="container">
 
 			<!-- Static navbar -->
@@ -68,8 +60,15 @@
 			      <% end %>
 			      <%= yield %>
 			</div>
-
 	</div>
+
+	<script>
+		$(function()
+		{
+			update_orders_input();
+			update_orders_button();
+		})
+	</script>
 
 	</body>
 </html>
