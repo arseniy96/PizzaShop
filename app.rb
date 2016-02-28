@@ -16,6 +16,9 @@ class Contact < ActiveRecord::Base
 end
 
 class Order < ActiveRecord::Base
+  validates :username, presence: true
+  validates :phone, presence: true
+  validates :address, presence: true
 end
 
 before do
