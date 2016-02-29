@@ -12,13 +12,13 @@
   </tr>
   </thead>
   <tbody>
-  <% @orders.each do |order| %>
+    <% @orders.each do |order| %>
       <tr>
         <td><%= order.orders_input %></td>
         <td><%= order.username %></td>
         <td><%= order.phone %></td>
         <td><%= order.address %></td>
       </tr>
-  <% end %>
+    <% end %>
   </tbody>
 </table>

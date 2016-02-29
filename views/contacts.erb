@@ -7,13 +7,13 @@
          value="<%= @c.username %>">
   </div>
   <div class="form-group">
-    <label class="sr-only" for="exampleInputPhone">EmailP</label>
-    <input name="client[email]" type="email" class="form-control" id="exampleInputPhone" placeholder="Your Email"
+    <label class="sr-only" for="exampleInputEmail">EmailP</label>
+    <input name="client[email]" type="email" class="form-control" id="exampleInputEmail" placeholder="Your Email"
            value="<%= @c.email %>">
   </div>
   <div class="form-group">
     <textarea name="client[message]" class="form-control" rows="4"><%= @c.message %></textarea>
   </div>
 
-  <p><button type="submit" class="btn btn-primary">Send!</button></p>
+  <button type="submit" class="btn btn-primary">Send!</button>
 </form>

@@ -23,7 +23,7 @@ end
 
 before do
   @pizza = Product.all
-  @orders = Order.all
+  @orders = Order.order('created_at DESC')
 end
 
 get '/' do
